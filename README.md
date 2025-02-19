@@ -132,17 +132,19 @@ Download data
 # fetch preprocessed PDBBind and Binding MOAD (as well as the optional DockGen and vdM datasets)
 cd data/
 
-wget https://zenodo.org/record/6408497/files/PDBBind.zip
+wget "https://mailmissouri-my.sharepoint.com/:u:/g/personal/acmwhb_umsystem_edu/EXesf4oh6ztOusGqFcDyqP0Bvk-LdJ1DagEl8GNK-HxDtg?download=1"
 wget https://zenodo.org/records/10656052/files/BindingMOAD_2020_processed.tar
 wget https://zenodo.org/records/10656052/files/DockGen.tar
 wget https://files.ipd.uw.edu/pub/training_sets/pdb_2021aug02.tar.gz
 
-unzip PDBBind.zip
+mv EXesf4oh6ztOusGqFcDyqP0Bvk-LdJ1DagEl8GNK-HxDtg?download=1 PDBBind.tar.gz
+
+tar -xzf PDBBind.tar.gz
 tar -xf BindingMOAD_2020_processed.tar
 tar -xf DockGen.tar
 tar -xzf pdb_2021aug02.tar.gz
 
-rm PDBBind.zip BindingMOAD_2020_processed.tar DockGen.tar pdb_2021aug02.tar.gz
+rm PDBBind.tar.gz BindingMOAD_2020_processed.tar DockGen.tar pdb_2021aug02.tar.gz
 
 mkdir pdbbind/ moad/ pdbsidechain/
 mv PDBBind_processed/ pdbbind/
