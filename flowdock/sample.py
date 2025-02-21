@@ -1,6 +1,7 @@
 import os
 
 import hydra
+import lightning as L
 import lovely_tensors as lt
 import pandas as pd
 import rootutils
@@ -151,6 +152,10 @@ def sample(cfg: DictConfig) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     assert (cfg.input_receptor is not None and cfg.input_ligand is not None) or (
         cfg.csv_path is not None and os.path.exists(cfg.csv_path)
     ), "Please provide either an input receptor and ligand or a CSV file with receptor and ligand sequences/filepaths."
+
+    # set seed for random number generators in pytorch, numpy and python.random
+    if cfg.get("seed"):
+        L.seed_everything(cfg.seed, workers=True)
 
     log.info(
         f"Setting `float32_matmul_precision` to {cfg.model.cfg.task.float32_matmul_precision}."
