@@ -19,6 +19,9 @@ tags: ["eval", "combined", "flowdock_fm"]
 # passing checkpoint path is necessary for evaluation
 ckpt_path: ???
 
+# seed for random number generators in pytorch, numpy and python.random
+seed: null
+
 # model arguments
 model:
   cfg:
