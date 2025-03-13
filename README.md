@@ -35,17 +35,22 @@ This is the official codebase of the paper
 
 ## Contents
 
-- [Installation](#installation)
-- [How to prepare data for FlowDock](#how-to-prepare-data-for-flowdock)
-- [How to train FlowDock](#how-to-train-flowdock)
-- [How to evaluate FlowDock](#how-to-evaluate-flowdock)
-- [How to create comparative plots of evaluation results](#how-to-create-comparative-plots-of-evaluation-results)
-- [How to predict new protein-ligand complex structures and their affinities using FlowDock](#how-to-predict-new-protein-ligand-complex-structures-using-flowdock)
-- [For developers](#for-developers)
-- [Docker](#docker)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-- [Citing this work](#citing-this-work)
+- [FlowDock](#flowdock)
+  - [Description](#description)
+  - [Contents](#contents)
+  - [Installation](#installation)
+  - [How to prepare data for `FlowDock`](#how-to-prepare-data-for-flowdock)
+    - [Generating ESM2 embeddings for each protein (optional, cached input data available on SharePoint)](#generating-esm2-embeddings-for-each-protein-optional-cached-input-data-available-on-sharepoint)
+    - [Predicting apo protein structures using ESMFold (optional, cached data available on Zenodo)](#predicting-apo-protein-structures-using-esmfold-optional-cached-data-available-on-zenodo)
+  - [How to train `FlowDock`](#how-to-train-flowdock)
+  - [How to evaluate `FlowDock`](#how-to-evaluate-flowdock)
+  - [How to create comparative plots of benchmarking results](#how-to-create-comparative-plots-of-benchmarking-results)
+  - [How to predict new protein-ligand complex structures and their affinities using `FlowDock`](#how-to-predict-new-protein-ligand-complex-structures-and-their-affinities-using-flowdock)
+  - [For developers](#for-developers)
+  - [Docker](#docker)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+  - [Citing this work](#citing-this-work)
 
 ## Installation
 
@@ -359,6 +364,14 @@ python flowdock/sample.py ckpt_path=checkpoints/esmfold_prior_paper_weights_EMA.
 
 If you do not already have a template protein structure available for your target of interest, set `input_template=null` to instead have the sampling script predict the ESMFold structure of your provided `input_protein` sequence before running the sampling pipeline. For more information regarding the input arguments available for sampling, please refer to the config at `configs/sample.yaml`.
 
+**NOTE:** To optimize prediction runtimes, a `csv_path` can be specified instead of the `input_receptor`, `input_ligand`, and `input_template` CLI arguments to perform *batched* prediction for a collection of protein-ligand sequence pairs, each represented as a CSV row containing column values for `id`, `input_receptor`, `input_ligand`, and `input_template`. Additionally, disabling `visualize_sample_trajectories` may reduce storage requirements when predicting a large batch of inputs.
+
+For instance, one can perform batched prediction as follows:
+
+```bash
+python flowdock/sample.py ckpt_path=checkpoints/esmfold_prior_paper_weights_EMA.ckpt model.cfg.prior_type=esmfold sampling_task=batched_structure_sampling csv_path='./data/test_cases/prediction_inputs/flowdock_batched_inputs.csv' out_path='./T1152_batch_sampled_structures/' n_samples=5 chunk_size=5 num_steps=40 sampler=VDODE sampler_eta=1.0 start_time='1.0' use_template=true separate_pdb=true visualize_sample_trajectories=false auxiliary_estimation_only=false esmfold_chunk_size=null trainer=gpu
+```
+
 </details>
 
 ## For developers
@@ -395,8 +408,6 @@ Given that this tool has a number of dependencies, it may be easier to run it in
 
 Pull from [Docker Hub](https://hub.docker.com/repository/docker/cford38/flowdock): `docker pull cford38/flowdock:latest`
 
-
-
 Alternatively, build the Docker image locally:
 
 ```bash
@@ -412,7 +423,6 @@ docker run --gpus all -v ./checkpoints:/software/flowdock/checkpoints --rm --nam
 ```
 
 </details>
-
 
 ## Acknowledgements
 
