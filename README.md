@@ -24,7 +24,7 @@ This is the official codebase of the paper
 
 **FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction**
 
-\[[arXiv](https://arxiv.org/abs/2412.10966)\]
+\[[arXiv](https://arxiv.org/abs/2412.10966)\] \[[Neurosnap](https://neurosnap.ai/service/FlowDock)\] \[[Tamarind Bio](https://app.tamarind.bio/tools/flowdock)\]
 
 <div align="center">
 
