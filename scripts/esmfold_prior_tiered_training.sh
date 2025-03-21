@@ -30,6 +30,9 @@ fi
 source /cluster/pixstor/chengji-lab/acmwhb/miniforge3/etc/profile.d/conda.sh
 conda activate "$project_dir"/FlowDock/
 
+# Reference Conda system libraries
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+
 # NOTE: for tiered training, start by setting `model.cfg.task.freeze_score_head=false` and `model.cfg.task.freeze_affinity=true`,
 # and once the model's score head has been trained to convergence, resume training with `model.cfg.task.freeze_score_head=true` and `model.cfg.task.freeze_affinity=false`
 

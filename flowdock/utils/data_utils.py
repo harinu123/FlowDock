@@ -27,8 +27,6 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Geometry import Point3D
 
-from flowdock.data.components.process_mols import read_molecule
-
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 
 from flowdock.data.components import residue_constants
@@ -37,6 +35,7 @@ from flowdock.data.components.mol_features import (
     collate_numpy_samples,
     process_mol_file,
 )
+from flowdock.data.components.process_mols import read_molecule
 from flowdock.data.components.residue_constants import restype_1to3 as af_restype_1to3
 from flowdock.data.components.residue_constants import restypes as af_restypes
 from flowdock.models.components.transforms import LatentCoordinateConverter
@@ -1216,7 +1215,7 @@ def convert_protein_pts_to_pdb(
         chain = Chain(chain_id)
         model.add(chain)
 
-        protein_chain_data = torch.load(processed_pt_filename)
+        protein_chain_data = torch.load(processed_pt_filename)  # nosec
         for residue_id in range(len(protein_chain_data["seq"])):
             aa = Polypeptide.one_to_three(protein_chain_data["seq"][residue_id])
             aa_atoms = AA_TO_LONG[AA_TO_NUM[aa]][:14]

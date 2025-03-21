@@ -1,0 +1,18 @@
+_target_: flowdock.data.plinder_datamodule.PlinderDataModule
+data_dir: ${paths.data_dir}/PLINDER/
+batch_size: 16 # Needs to be divisible by the number of devices (e.g., if in a distributed setup)
+num_workers: 4
+pin_memory: True
+# overfitting arguments
+overfitting_example_name: null # NOTE: currently not used
+# model arguments
+n_protein_patches: 96
+n_lig_patches: 32
+epoch_frac: 1.0
+edge_crop_size: 400000
+esm_version: ${model.cfg.protein_encoder.esm_version}
+esm_repr_layer: ${model.cfg.protein_encoder.esm_repr_layer}
+# general dataset arguments
+plinder_offline: False
+min_protein_length: 50
+max_protein_length: 750

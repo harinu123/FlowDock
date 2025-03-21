@@ -1,50 +1,58 @@
 name: flowdock
 channels:
   - pyg
-  - iopath
   - pytorch
   - nvidia
   - defaults
   - conda-forge
 dependencies:
-  - hydra-core=1.3.2=pyhd8ed1ab_0
-  - mendeleev=0.15.0=pyhc1e730c_0
-  - msgpack-python=1.0.3=py39hd09550d_0
-  - networkx=3.1=py39h06a4308_0
-  - omegaconf=2.3.0=pyhd8ed1ab_0
-  - pandas=2.1.4=py39h1128e8f_0
-  - python=3.9.17=h0755675_0_cpython
-  - pytorch=2.2.1=py3.9_cuda11.8_cudnn8.7.0_0
-  - pytorch-cuda=11.8=h7e8668a_5
+  - mendeleev=0.20.1=pymin39_ha308f57_3
+  - networkx=3.4.2=pyh267e887_2
+  - python=3.10.16=he725a3c_1_cpython
+  - pytorch=2.2.1=py3.10_cuda11.8_cudnn8.7.0_0
+  - pytorch-cuda=11.8=h7e8668a_6
   - pytorch-mutex=1.0=cuda
-  - pytorch-scatter=2.1.2=py39_torch_2.2.0_cu118
-  - rdkit=2024.03.1=py39h6cc1c65_0
-  - rich=13.3.5=py39h06a4308_0
-  - scikit-learn=1.4.1.post1=py39ha22ef79_0
-  - scipy=1.12.0=py39h474f0d3_2
-  - torchaudio=2.2.1=py39_cu118
-  - torchtriton=2.2.0=py39
-  - torchvision=0.17.1=py39_cu118
-  - tqdm=4.66.1=pyhd8ed1ab_0
+  - pytorch-scatter=2.1.2=py310_torch_2.2.0_cu118
+  - rdkit=2024.09.6=py310hcd13295_0
+  - scikit-learn=1.6.1=py310h27f47ee_0
+  - scipy=1.15.2=py310h1d65ade_0
+  - torchaudio=2.2.1=py310_cu118
+  - torchtriton=2.2.0=py310
+  - torchvision=0.17.1=py310_cu118
+  - tqdm=4.67.1=pyhd8ed1ab_1
   - pip:
-      - beartype==0.17.2
-      - biopandas==0.4.1
-      - biopython>=1.79
-      - dm-tree==0.1.8
-      - einops==0.7.0
+      - beartype==0.20.0
+      - biopandas==0.5.1
+      - biopython==1.79
+      - biotite==1.1.0
+      - git+https://github.com/NVIDIA/dllogger.git@0540a43971f4a8a16693a9de9de73c1072020769
+      - dm-tree==0.1.9
+      - einops==0.8.1
       - fair-esm==2.0.0
+      - fairscale==0.4.13
+      - gemmi==0.7.0
       - hydra-colorlog==1.2.0
-      - lightning==2.2.2
-      - lightning-utilities==0.11.1
-      - lovely-numpy==0.2.11
-      - lovely-tensors==0.1.15
-      - ml-collections==0.1.1
+      - hydra-core==1.3.2
+      - hydra-optuna-sweeper==1.2.0
+      - lightning==2.5.0.post0
+      - lightning-utilities==0.14.1
+      - lovely-numpy==0.2.13
+      - lovely-tensors==0.1.18
+      - ml-collections==1.0.0
+      - msgpack==1.1.0
       - msgpack-numpy==0.4.8
-      - numpy==1.23.5
+      - numpy==1.26.4
+      - omegaconf==2.3.0
       - git+https://github.com/amorehead/openfold.git@fe1275099639bf7e617e09ef24d6af778647dd64
-      - prody==2.4.1
-      - pytorch-lightning==2.2.2
+      - pandas==2.2.3
+      - plinder==0.2.24
+      - plotly==6.0.0
+      - posebusters==0.2.13
+      # - prody==2.4.1  # NOTE: we must `pip` install Prody to skip its NumPy dependency
+      - pytorch-lightning==2.5.0.post0
       - git+https://github.com/facebookresearch/pytorch3d.git@3da7703c5ac10039645966deddffe8db52eab8c5
+      - rich==13.9.4
       - rootutils==1.0.7
-      - torchmetrics==1.3.1
-      - wandb==0.17.0
+      - seaborn==0.13.2
+      - torchmetrics==1.6.3
+      - wandb==0.19.8
