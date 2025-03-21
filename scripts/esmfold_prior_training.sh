@@ -30,6 +30,9 @@ fi
 source /cluster/pixstor/chengji-lab/acmwhb/miniforge3/etc/profile.d/conda.sh
 conda activate "$project_dir"/FlowDock/
 
+# Reference Conda system libraries
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+
 echo "Calling flowdock/train.py!"
 cd "$project_dir" || exit
 srun python3 flowdock/train.py \

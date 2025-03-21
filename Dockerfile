@@ -20,12 +20,15 @@ RUN mkdir -p /software/flowdock
 WORKDIR /software/flowdock
 
 ## Clone project
-RUN git clone https://github.com/BioinfoMachineLearning/FlowDock /software/flowdock 
+RUN git clone https://github.com/BioinfoMachineLearning/FlowDock /software/flowdock
 
 ## Create conda environment
 # RUN conda env create -f environments/flowdock_environment.yaml
 COPY environments/flowdock_environment_docker.yaml /software/flowdock/environments/flowdock_environment_docker.yaml
 RUN conda env create -f environments/flowdock_environment_docker.yaml
+
+# Install ProDy without NumPy dependency
+RUN python -m pip install --no-cache-dir --no-dependencies prody==2.4.1
 
 ## Automatically activate conda environment
 RUN echo "source activate flowdock" >> /etc/profile.d/conda.sh && \
