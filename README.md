@@ -12,7 +12,7 @@
 
 <!-- [![Conference](http://img.shields.io/badge/AnyConference-year-4b44ce.svg)](https://papers.nips.cc/paper/2020) -->
 
-[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15066390.svg)](https://doi.org/10.5281/zenodo.15066390)
+[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15066450.svg)](https://doi.org/10.5281/zenodo.15066450)
 
 <img src="./img/FlowDock.png" width="600">
 
@@ -92,7 +92,7 @@ cd ../
 
 ```bash
 # pretrained FlowDock weights
-wget https://zenodo.org/records/15066390/files/flowdock_checkpoints.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_checkpoints.tar.gz
 tar -xzf flowdock_checkpoints.tar.gz
 rm flowdock_checkpoints.tar.gz
 ```
@@ -106,19 +106,19 @@ tar -xzf flowdock_data_cache.tar.gz
 rm flowdock_data_cache.tar.gz
 
 # cached data for PDBBind, Binding MOAD, DockGen, and the PDB-based van der Mers (vdM) dataset
-wget https://zenodo.org/records/15066390/files/flowdock_pdbbind_data.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_pdbbind_data.tar.gz
 tar -xzf flowdock_pdbbind_data.tar.gz
 rm flowdock_pdbbind_data.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_moad_data.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_moad_data.tar.gz
 tar -xzf flowdock_moad_data.tar.gz
 rm flowdock_moad_data.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_dockgen_data.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_dockgen_data.tar.gz
 tar -xzf flowdock_dockgen_data.tar.gz
 rm flowdock_dockgen_data.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_pdbsidechain_data.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_pdbsidechain_data.tar.gz
 tar -xzf flowdock_pdbsidechain_data.tar.gz
 rm flowdock_pdbsidechain_data.tar.gz
 ```
@@ -130,7 +130,7 @@ rm flowdock_pdbsidechain_data.tar.gz
 <details>
 
 **NOTE:** The following steps (besides downloading PDBBind and Binding MOAD's PDB files) are only necessary if one wants to fully process each of the following datasets manually.
-Otherwise, preprocessed versions of each dataset can be found on [Zenodo](https://zenodo.org/records/15066390).
+Otherwise, preprocessed versions of each dataset can be found on [Zenodo](https://zenodo.org/records/15066450).
 
 Download data
 
@@ -302,55 +302,55 @@ Download baseline method predictions and results
 
 ```bash
 # cached predictions and evaluation metrics for reproducing structure prediction paper results
-wget https://zenodo.org/records/15066390/files/alphafold3_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/alphafold3_baseline_method_predictions.tar.gz
 tar -xzf alphafold3_baseline_method_predictions.tar.gz
 rm alphafold3_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/chai_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/chai_baseline_method_predictions.tar.gz
 tar -xzf chai_baseline_method_predictions.tar.gz
 rm chai_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/diffdock_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/diffdock_baseline_method_predictions.tar.gz
 tar -xzf diffdock_baseline_method_predictions.tar.gz
 rm diffdock_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/dynamicbind_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/dynamicbind_baseline_method_predictions.tar.gz
 tar -xzf dynamicbind_baseline_method_predictions.tar.gz
 rm dynamicbind_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_baseline_method_predictions.tar.gz
 tar -xzf flowdock_baseline_method_predictions.tar.gz
 rm flowdock_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_aft_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_aft_baseline_method_predictions.tar.gz
 tar -xzf flowdock_aft_baseline_method_predictions.tar.gz
 rm flowdock_aft_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_pft_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_pft_baseline_method_predictions.tar.gz
 tar -xzf flowdock_pft_baseline_method_predictions.tar.gz
 rm flowdock_pft_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_esmfold_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_esmfold_baseline_method_predictions.tar.gz
 tar -xzf flowdock_esmfold_baseline_method_predictions.tar.gz
 rm flowdock_esmfold_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_chai_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_chai_baseline_method_predictions.tar.gz
 tar -xzf flowdock_chai_baseline_method_predictions.tar.gz
 rm flowdock_chai_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/flowdock_hp_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/flowdock_hp_baseline_method_predictions.tar.gz
 tar -xzf flowdock_hp_baseline_method_predictions.tar.gz
 rm flowdock_hp_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/neuralplexer_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/neuralplexer_baseline_method_predictions.tar.gz
 tar -xzf neuralplexer_baseline_method_predictions.tar.gz
 rm neuralplexer_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/vina_p2rank_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/vina_p2rank_baseline_method_predictions.tar.gz
 tar -xzf vina_p2rank_baseline_method_predictions.tar.gz
 rm vina_p2rank_baseline_method_predictions.tar.gz
 
-wget https://zenodo.org/records/15066390/files/rfaa_baseline_method_predictions.tar.gz
+wget https://zenodo.org/records/15066450/files/rfaa_baseline_method_predictions.tar.gz
 tar -xzf rfaa_baseline_method_predictions.tar.gz
 rm rfaa_baseline_method_predictions.tar.gz
 ```
