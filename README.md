@@ -358,9 +358,11 @@ rm rfaa_baseline_method_predictions.tar.gz
 Reproduce paper result figures
 
 ```bash
-jupyter notebook notebooks/posebusters_benchmark_structure_prediction_results_plotting.ipynb
-jupyter notebook notebooks/dockgen_structure_prediction_results_plotting.ipynb
 jupyter notebook notebooks/casp16_binding_affinity_prediction_results_plotting.ipynb
+jupyter notebook notebooks/casp16_flowdock_vs_multicom_ligand_structure_prediction_results_plotting.ipynb
+jupyter notebook notebooks/dockgen_structure_prediction_results_plotting.ipynb
+jupyter notebook notebooks/posebusters_benchmark_structure_prediction_chemical_similarity_analysis.ipynb
+jupyter notebook notebooks/posebusters_benchmark_structure_prediction_results_plotting.ipynb
 ```
 
 </details>
