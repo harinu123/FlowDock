@@ -386,7 +386,7 @@ def multi_pose_sampling(
                 }
             )
             aux_estimation_all_df.to_csv(
-                os.path.join(out_path, "auxiliary_estimation.csv"), index=False
+                os.path.join(out_path, f"{sample_id if sample_id is not None else 'sample'}_auxiliary_estimation.csv"), index=False
             )
     else:
         ref_mol = None
