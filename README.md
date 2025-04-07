@@ -464,10 +464,10 @@ This project is covered under the **MIT License**.
 If you use the code or data associated with this package or otherwise find this work useful, please cite:
 
 ```bibtex
-@article{morehead2024flowdock,
-  title={FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction},
-  author={Morehead, Alex and Cheng, Jianlin},
-  journal={arXiv preprint arXiv:2412.10966},
-  year={2024}
+@inproceedings{morehead2025flowdock,
+    title={FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction}, 
+    author={Alex Morehead and Jianlin Cheng},
+    booktitle={Intelligent Systems for Molecular Biology (ISMB)},
+    year=2025,
 }
 ```
