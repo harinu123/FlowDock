@@ -9,9 +9,7 @@
 <!-- <a href="https://github.com/ashleve/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a><br> -->
 
 [![Paper](http://img.shields.io/badge/paper-arxiv.2412.10966-B31B1B.svg)](https://arxiv.org/abs/2412.10966)
-
-<!-- [![Conference](http://img.shields.io/badge/AnyConference-year-4b44ce.svg)](https://papers.nips.cc/paper/2020) -->
-
+[![Conference](http://img.shields.io/badge/ISMB-2025-4b44ce.svg)](https://academic.oup.com/bioinformatics/article/41/Supplement_1/i198/8199366)
 [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15066450.svg)](https://doi.org/10.5281/zenodo.15066450)
 
 <img src="./img/FlowDock.png" width="600">
@@ -24,7 +22,7 @@ This is the official codebase of the paper
 
 **FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction**
 
-\[[arXiv](https://arxiv.org/abs/2412.10966)\] \[[Neurosnap](https://neurosnap.ai/service/FlowDock)\] \[[Tamarind Bio](https://app.tamarind.bio/tools/flowdock)\]
+\[[arXiv](https://arxiv.org/abs/2412.10966)\] \[[ISMB](https://academic.oup.com/bioinformatics/article/41/Supplement_1/i198/8199366)\] \[[Neurosnap](https://neurosnap.ai/service/FlowDock)\] \[[Tamarind Bio](https://app.tamarind.bio/tools/flowdock)\]
 
 <div align="center">
 
