@@ -18,7 +18,7 @@
 
 ## Description
 
-This is the official codebase of the paper
+MoleculeMind reproduction of flowdock
 
 **FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction**
 
